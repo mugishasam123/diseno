@@ -8,23 +8,25 @@ import Catalog from './Catalog.vue';
     <div class="hero">
         <div class="doublePara">
             <div class="bold">
-                <p>Creativity, pure Italian style and continuous research, in order to infuse jacquard fabrics that are
-                    rich
-                    in tradition with contemporary </p>
-                <span class="center">spirit.</span>
+                <p>Creativity, pure Italian style and continuous </p>
+                <p>research, in order to infuse jacquard fabrics</p>
+                <p>that are rich in tradition with contemporary </p>
+                <p class="center">spirit.</p>
             </div>
 
-            <p class="second">A family tradition of artisan textile production, dedicated to the creation of high-end
-                yarn-dyed
-                jacquard fabrics, all of which are made in Italy.
+            <div class="second">
+                <p> A family tradition of artisan textile production, dedicated to the creation of high-end
+                    yarn-dyed
+                    jacquard fabrics, all of which are made in Italy.</p>
+                <p>Today, the BRIGNOLI brand is widely recognised for its honed stylistic skill, its creative
+                    sophistication and its attention to detail.</p>
 
-                Today, the BRIGNOLI brand is widely recognised for its honed stylistic skill, its creative
-                sophistication and its attention to detail.
-
-                Custom solutions to meet the needs of the constantly-evolving residential and hotel sectors; not only
-                classic weaves,
-
-                but also fabrics for accessories that are rich in details and artisan craftsmanship</p>
+                <p> Custom solutions to meet the needs of the constantly-evolving residential and hotel sectors; not
+                    only
+                    classic weaves,</p>
+                <p>but also fabrics for accessories that are rich in details and artisan craftsmanship
+                </p>
+            </div>
         </div>
         <Catalog />
     </div>
@@ -41,7 +43,7 @@ import Catalog from './Catalog.vue';
 }
 
 .center {
-    text-align: center;
+    padding-left: 43%;
 }
 
 .d-flex {
@@ -54,13 +56,14 @@ import Catalog from './Catalog.vue';
     display: flex;
     flex-direction: column;
     gap: 25px;
+    font-size: 54px;
 }
 
 .bold {
     font-family: 'Bodoni Moda';
     font-style: normal;
     font-weight: 700;
-    font-size: 56px;
+
     color: #000000;
     line-height: 120%;
 }
@@ -71,10 +74,8 @@ import Catalog from './Catalog.vue';
     font-weight: 500;
     font-size: 16px;
     line-height: 150%;
-
     text-align: center;
     letter-spacing: 0.03em;
-
     color: #000000;
 }
 

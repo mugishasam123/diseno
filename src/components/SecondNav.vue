@@ -10,11 +10,11 @@
         </a>
         <ul class="left d-flex">
             <li><a class="active" href="#">CATALOG</a></li>
-            <i class="fa-thin fa-angle-left"></i>
+            <i class="fa-solid fa-chevron-left"></i>
             <li><a class="inactive underline" href="#">SOLUTIONS</a></li>
             <li><a class="inactive" href="#">NEWS</a></li>
             <li><a class="inactive" href="#">PROJECTS</a></li>
-            <i class="fa-thin fa-angle-right"></i>
+            <i class="fa-solid fa-chevron-right"></i>
         </ul>
     </div>
 
@@ -31,8 +31,11 @@
     font-family: 'Montserrat';
     font-style: normal;
     font-weight: 700;
-    font-size: 24px;
+    font-size: 20px;
     line-height: 29px;
+}
+.fa-chevron-left{
+    opacity: 0.4;
 }
 
 .underline {
@@ -43,7 +46,7 @@
     font-family: 'Montserrat';
     font-style: normal;
     font-weight: 400;
-    font-size: 24px;
+    font-size: 20px;
     line-height: 29px;
 
     color: rgba(255, 255, 255, 0.713);
