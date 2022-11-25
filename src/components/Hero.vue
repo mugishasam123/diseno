@@ -7,11 +7,17 @@ import Catalog from './Catalog.vue';
 
     <div class="hero">
         <div class="doublePara">
-            <div class="bold">
+            <div class="bold hide-mob">
                 <p>Creativity, pure Italian style and continuous </p>
                 <p>research, in order to infuse jacquard fabrics</p>
                 <p>that are rich in tradition with contemporary </p>
                 <p class="center">spirit.</p>
+            </div>
+            <div class="hide-des mobile">
+                <p>Creativity, pure Italian style and</p>
+                <p> continuous research, in order to</p>
+                <p>infuse jacquard fabrics that are rich</p>
+                <p>in tradition with contemporary spirit.</p>
             </div>
 
             <div class="second">
@@ -63,7 +69,6 @@ import Catalog from './Catalog.vue';
     font-family: 'Bodoni Moda';
     font-style: normal;
     font-weight: 700;
-
     color: #000000;
     line-height: 120%;
 }
@@ -79,6 +84,32 @@ import Catalog from './Catalog.vue';
     color: #000000;
 }
 
+.hide-des {
+    display: none;
+}
 
-@media(max-width: 768px) {}
+@media(max-width: 768px) {
+    .doublePara {
+        font-size: 24px;
+    }
+
+    .hide-mob {
+        display: none;
+    }
+
+    .hero {
+        padding: 0px 18px;
+
+    }
+
+    .mobile {
+        display: inline;
+        font-family: 'Bodoni Moda';
+        font-style: normal;
+        font-weight: 700;
+        font-size: 18px;
+        line-height: 27px;
+        text-align: center;
+    }
+}
 </style>

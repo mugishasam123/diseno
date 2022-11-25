@@ -85,5 +85,31 @@
     width: 55%;
 }
 
-@media(max-width: 768px) {}
+@media(max-width: 768px) {
+    .container {
+        flex-direction: column-reverse;
+    }
+
+    .top {
+
+        padding: 36px 16px;
+        border: none;
+    }
+
+    .img {
+        width: 100%;
+        height: 400px;
+    }
+
+    .title {
+        text-align: center;
+    }
+
+    .show {
+
+        padding: 20px 0px;
+        justify-content: center;
+        width: 100%;
+    }
+}
 </style>

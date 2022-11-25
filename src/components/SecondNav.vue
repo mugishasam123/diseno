@@ -4,17 +4,19 @@
 
 <template>
 
-    <div class="container navbar d-flex">
+    <div class="container d-flex">
         <a href="#">
             <img class="logo" src="../assets/logo2.png" alt="">
         </a>
-        <ul class="left d-flex">
+        <ul class="left">
             <li><a class="active" href="#">CATALOG</a></li>
-            <i class="fa-solid fa-chevron-left"></i>
-            <li><a class="inactive underline" href="#">SOLUTIONS</a></li>
-            <li><a class="inactive" href="#">NEWS</a></li>
-            <li><a class="inactive" href="#">PROJECTS</a></li>
-            <i class="fa-solid fa-chevron-right"></i>
+            <div class="left-arrow">
+                <i class="fa-solid fa-chevron-left"></i>
+                <li><a class="inactive underline" href="#">SOLUTIONS</a></li>
+                <li><a class="inactive hide-mob" href="#">NEWS</a></li>
+                <li><a class="inactive hide-mob" href="#">PROJECTS</a></li>
+                <i class="fa-solid fa-chevron-right"></i>
+            </div>
         </ul>
     </div>
 
@@ -34,7 +36,8 @@
     font-size: 20px;
     line-height: 29px;
 }
-.fa-chevron-left{
+
+.fa-chevron-left {
     opacity: 0.4;
 }
 
@@ -57,7 +60,7 @@
     height: 50px;
 }
 
-.navbar {
+.container {
     background-color: #A3846B;
     color: white;
     justify-content: space-between;
@@ -66,11 +69,59 @@
 
 .left {
     gap: 30px;
+    display: flex;
+    align-items: center;
+}
+
+.left-arrow {
+    gap: 30px;
+    display: flex;
+    align-items: center;
 }
 
 .user {
     gap: 10px;
 }
 
-@media(max-width: 768px) {}
+.hide-des {
+    display: none;
+}
+
+@media(max-width: 768px) {
+    .hide-des {
+        display: flex;
+    }
+
+    .hide-mob {
+        display: none;
+    }
+
+    .container {
+        background-color: #A3846B;
+        color: white;
+        gap: 31px;
+        padding: 10px 18px 19px 0px;
+    }
+
+
+
+    .left {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .left-arrow {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+    }
+
+    .inactive {
+        color: white;
+    }
+
+    .underline {
+        text-decoration: none;
+    }
+}
 </style>

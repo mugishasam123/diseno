@@ -20,7 +20,8 @@
                     inceptos
                     himenaeos. Curabitur tempus urna at turpis</p>
 
-                <p class="para"> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc vulputate libero et velit
+                <p class="para hide-mob"> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc vulputate libero
+                    et velit
                     interdum, ac
                     aliquet odio mattis. Class aptent taciti sociosqu ad litora torquent per conubia nostr</p>
             </div>
@@ -74,5 +75,24 @@
     height: 484px;
 }
 
-@media(max-width: 768px) {}
+@media(max-width: 768px) {
+    .container {
+        flex-direction: column;
+        padding: 36px 16px;
+
+    }
+
+    .hide-mob {
+        display: none;
+    }
+
+    .img {
+        width: 100%;
+        height: 330px;
+    }
+
+    .top {
+        width: 100%;
+    }
+}
 </style>
