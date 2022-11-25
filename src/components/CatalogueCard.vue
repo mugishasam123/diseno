@@ -90,5 +90,26 @@ defineComponent({
     height: 1px;
 }
 
-@media(max-width: 768px) {}
+@media(max-width: 768px) {
+    .cat-title {
+        font-family: 'Bodoni Moda';
+        font-style: normal;
+        font-weight: 700;
+        font-size: 40px;
+        line-height: 50px;
+    }
+
+    .cat-para {
+        padding: 0px;
+    }
+
+    .uptext {
+        position: absolute;
+        z-index: 100;
+        left: 25%;
+        right: 25%;
+        top: 25%;
+        bottom: 55%;
+    }
+}
 </style>

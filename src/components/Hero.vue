@@ -63,7 +63,6 @@ import Catalog from './Catalog.vue';
     font-family: 'Bodoni Moda';
     font-style: normal;
     font-weight: 700;
-
     color: #000000;
     line-height: 120%;
 }
@@ -80,5 +79,14 @@ import Catalog from './Catalog.vue';
 }
 
 
-@media(max-width: 768px) {}
+@media(max-width: 768px) {
+    .doublePara {
+        font-size: 24px;
+    }
+
+    .hero {
+        padding: 0px 18px;
+
+    }
+}
 </style>

@@ -49,5 +49,9 @@ import CatalogueCard from './CatalogueCard.vue';
     gap: 3px;
 }
 
-@media(max-width: 768px) {}
+@media(max-width: 768px) {
+    .d-flex {
+        flex-direction: column;
+    }
+}
 </style>
