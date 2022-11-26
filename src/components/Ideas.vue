@@ -1,7 +1,3 @@
-<script setup>
-
-</script>
-
 <template>
     <div class="container">
         <img class="img" src="../assets/ideas/idea.png" alt="idea">

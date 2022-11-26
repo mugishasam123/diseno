@@ -1,6 +1,3 @@
-<script setup>
-
-</script>
 <template>
     <div class="container">
         <h3 class="title">Catalog</h3>

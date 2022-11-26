@@ -9,8 +9,6 @@ export default {
             if (prevTrans.m41 < 0) {
                 navMenu.style.transform = `translateX(${(prevTrans.m41 + 100)}px)`
             }
-
-            const NextTrans = new WebKitCSSMatrix(window.getComputedStyle(navMenu).transform)
         },
         scrollLeft() {
             const navMenu = document.querySelector('.nav-links')
@@ -18,7 +16,6 @@ export default {
             if (-prevTrans.m41 < 660) {
                 navMenu.style.transform = `translateX(${(prevTrans.m41 - 110)}px)`
             }
-            const NextTrans = new WebKitCSSMatrix(window.getComputedStyle(navMenu).transform)
         }
     }
 }
@@ -166,8 +163,6 @@ export default {
         gap: 31px;
         padding: 10px 18px 19px 0px;
     }
-
-
 
     .left {
         flex-direction: column;

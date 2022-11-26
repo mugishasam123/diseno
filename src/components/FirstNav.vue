@@ -1,8 +1,3 @@
-<script setup>
-
-</script>
-
-
 <template>
 
     <nav class="container  d-flex">
