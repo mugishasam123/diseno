@@ -52,6 +52,11 @@
 }
 
 .container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
     background-color: #000000;
     color: white;
     justify-content: space-between;
@@ -73,6 +78,7 @@
 
 @media(max-width: 768px) {
     .container {
+        position: inherit;
         background-color: #000000;
         color: white;
         justify-content: space-between;

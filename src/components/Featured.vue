@@ -1,7 +1,3 @@
-<script setup>
-
-</script>
-
 <template>
 
     <div class="container">
@@ -70,7 +66,7 @@
 
             <div class="card">
                 <img class="img" src="../assets/featured/feature4.png" alt="featured">
-                <div class=" arrows ">
+                <div class="arrows">
                     <div class="hide-des between">
                         <img class="icon" src="../assets/left.png" alt="left-arrow">
                         <img class="icon" src="../assets/right.png" alt="right-arrow">
@@ -103,6 +99,7 @@
     background-color: #EDEAE6;
 }
 
+
 .title {
     font-family: 'Bodoni Moda';
     font-style: normal;
@@ -123,10 +120,111 @@
 
 .card {
     width: 25%;
+    height: 400px;
 }
+
+
+.description {
+    display: flex;
+    flex-direction: column;
+    gap: 35px;
+    align-items: center;
+}
+
+
+.red {
+    background-color: #973528;
+}
+
+.gray {
+    background-color: #9A9EA3;
+}
+
+.green {
+    background-color: #00513C;
+}
+
+.black {
+    background-color: #1E1E1E;
+}
+
+
+
+.paragraph {
+    font-family: 'Raleway';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 28px;
+    text-align: center;
+    letter-spacing: 0.02em;
+}
+
+.number {
+    font-family: 'Raleway';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 20px;
+    letter-spacing: 0.03em;
+}
+
+.circle {
+    height: 20px;
+    width: 20px;
+    border-radius: 100%;
+}
+
+.circles {
+    display: flex;
+    gap: 12px;
+}
+
+
+.card:hover {
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    position: relative;
+    background-color: white;
+}
+
+.card:hover>.hide-des {
+    display: flex;
+}
+
+.card:hover>.img {
+    width: 100%;
+    height: 50%;
+}
+
+.arrows {
+    position: absolute;
+    z-index: 100;
+    left: 0%;
+    right: 0%;
+    top: 30%;
+    bottom: 50%;
+    height: fit-content;
+}
+
+
+.icon {
+    width: 35px;
+    height: 35px;
+}
+
 
 .hide-des {
     display: none;
+}
+
+.between {
+    display: flex;
+    padding: 0px 9px;
+    justify-content: space-between;
+    align-items: center;
 }
 
 @media(max-width: 768px) {
@@ -182,6 +280,14 @@
 
     .img {
         width: 100%;
+        height: 328px;
+    }
+
+    .card:hover {
+        background-color: transparent;
+    }
+
+    .card:hover>.img {
         height: 328px;
     }
 

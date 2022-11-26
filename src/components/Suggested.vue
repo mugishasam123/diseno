@@ -9,7 +9,11 @@
     <div class="container">
         <div class="heading">
             <h3 class="title">Products you might like</h3>
-            <i class="fa-solid fa-arrow-right-long hide-mob"></i>
+            <div class="left-right hide-mob">
+                <i class="inactive fa-solid fa-arrow-left-long "></i>
+                <i class="fa-solid fa-arrow-right-long "></i>
+            </div>
+
         </div>
 
         <div class="featured">
@@ -133,6 +137,11 @@
     height: 400px;
 }
 
+.left-right {
+    display: flex;
+    gap: 10px;
+}
+
 .heading {
     display: flex;
     justify-content: space-between;
@@ -152,10 +161,112 @@
 
 .card {
     width: 25%;
+    height: 400px;
 }
+
+.inactive {
+    color: gray;
+}
+
+.description {
+    display: flex;
+    flex-direction: column;
+    gap: 35px;
+    align-items: center;
+}
+
+
+.red {
+    background-color: #973528;
+}
+
+.gray {
+    background-color: #9A9EA3;
+}
+
+.green {
+    background-color: #00513C;
+}
+
+.black {
+    background-color: #1E1E1E;
+}
+
+.paragraph {
+    font-family: 'Raleway';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 28px;
+    text-align: center;
+    letter-spacing: 0.02em;
+}
+
+.number {
+    font-family: 'Raleway';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 20px;
+    letter-spacing: 0.03em;
+}
+
+.circle {
+    height: 20px;
+    width: 20px;
+    border-radius: 100%;
+}
+
+.circles {
+    display: flex;
+    gap: 12px;
+}
+
+
+.card:hover {
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    position: relative;
+    background-color: white;
+}
+
+.card:hover>.hide-des {
+    display: flex;
+}
+
+.card:hover>.img {
+    width: 100%;
+    height: 50%;
+}
+
+.arrows {
+    position: absolute;
+    z-index: 100;
+    left: 0%;
+    right: 0%;
+    top: 30%;
+    bottom: 50%;
+    height: fit-content;
+}
+
+
+.icon {
+    width: 35px;
+    height: 35px;
+}
+
 
 .hide-des {
     display: none;
+}
+
+.between {
+    display: flex;
+    padding: 0px 9px;
+    justify-content: space-between;
+    align-items: center;
 }
 
 
@@ -216,7 +327,7 @@
 
     .img {
         width: 100%;
-        height: 287px;
+        height: 200px;
     }
 
     .circle {
@@ -261,6 +372,10 @@
         position: relative;
     }
 
+    .card:hover {
+        background-color: transparent;
+    }
+
     .down-arrows {
         display: flex;
         justify-content: space-between;
@@ -269,7 +384,6 @@
 
     .inactive {
         color: gray;
-
     }
 
     .pagination {

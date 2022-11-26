@@ -1,4 +1,27 @@
-<script setup>
+<script>
+
+export default {
+
+    methods: {
+        scrollRight() {
+            const navMenu = document.querySelector('.nav-links')
+            const prevTrans = new WebKitCSSMatrix(window.getComputedStyle(navMenu).transform)
+            if (prevTrans.m41 < 0) {
+                navMenu.style.transform = `translateX(${(prevTrans.m41 + 100)}px)`
+            }
+
+            const NextTrans = new WebKitCSSMatrix(window.getComputedStyle(navMenu).transform)
+        },
+        scrollLeft() {
+            const navMenu = document.querySelector('.nav-links')
+            const prevTrans = new WebKitCSSMatrix(window.getComputedStyle(navMenu).transform)
+            if (-prevTrans.m41 < 660) {
+                navMenu.style.transform = `translateX(${(prevTrans.m41 - 110)}px)`
+            }
+            const NextTrans = new WebKitCSSMatrix(window.getComputedStyle(navMenu).transform)
+        }
+    }
+}
 </script>
 
 
@@ -8,16 +31,25 @@
         <a href="#">
             <img class="logo" src="../assets/logo2.png" alt="">
         </a>
-        <ul class="left">
-            <li><a class="active" href="#">CATALOG</a></li>
+        <div class="left">
+            <a class="active" href="#">CATALOG</a>
             <div class="left-arrow">
-                <i class="fa-solid fa-chevron-left"></i>
-                <li><a class="inactive underline" href="#">SOLUTIONS</a></li>
-                <li><a class="inactive hide-mob" href="#">NEWS</a></li>
-                <li><a class="inactive hide-mob" href="#">PROJECTS</a></li>
-                <i class="fa-solid fa-chevron-right"></i>
+                <i @click="scrollRight" class="fa-solid fa-chevron-left"></i>
+                <div class="des-menu">
+                    <ul class="nav-links">
+                        <li><a class="inactive underline" href="#">SOLUTIONS</a></li>
+                        <li><a class="inactive hide-mob" href="#">NEWS</a></li>
+                        <li><a class="inactive hide-mob" href="#">PROJECTS</a></li>
+                        <li><a class="inactive hide-mob" href="#">ABOUT</a></li>
+                        <li><a class="inactive hide-mob" href="#">PRESS</a></li>
+                        <li><a class="inactive hide-mob" href="#">CONTACT</a></li>
+                        <li><a class="inactive hide-mob" href="#">TEXTURES</a></li>
+                        <li><a class="inactive hide-mob" href="#">INSPIRATION</a></li>
+                    </ul>
+                </div>
+                <i @click="scrollLeft" class="fa-solid fa-chevron-right"></i>
             </div>
-        </ul>
+        </div>
     </div>
 
 </template>
@@ -45,6 +77,19 @@
     text-decoration-line: underline;
 }
 
+.nav-links {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+    transition: transform 0.8s ease-out;
+    transform: translateX(0px);
+}
+
+.des-menu {
+    width: 348.9px;
+    overflow: hidden;
+}
+
 .inactive {
     font-family: 'Montserrat';
     font-style: normal;
@@ -61,6 +106,11 @@
 }
 
 .container {
+    position: fixed;
+    top: 92px;
+    left: 0;
+    right: 0;
+    z-index: 1000;
     background-color: #A3846B;
     color: white;
     justify-content: space-between;
@@ -74,7 +124,7 @@
 }
 
 .left-arrow {
-    gap: 30px;
+    gap: 20px;
     display: flex;
     align-items: center;
 }
@@ -88,8 +138,22 @@
 }
 
 @media(max-width: 768px) {
+    .container {
+        position: inherit;
+    }
+
     .hide-des {
         display: flex;
+    }
+
+    .nav-links {
+        gap: 0px;
+        width: fit-content;
+    }
+
+    .des-menu {
+        gap: 0px;
+        width: fit-content;
     }
 
     .hide-mob {

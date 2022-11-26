@@ -41,7 +41,7 @@ import Catalog from './Catalog.vue';
 
 <style scoped>
 .hero {
-    padding: 0px 100px;
+    padding: 140px 100px 0px 100px;
     display: flex;
     flex-direction: column;
     gap: 60px;
