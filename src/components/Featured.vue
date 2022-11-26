@@ -7,7 +7,7 @@
             <div class="card">
                 <img class="img" src="../assets/featured/feature1.png" alt="featured">
                 <div class=" arrows ">
-                    <div class="hide-des between">
+                    <div class="between hide-des">
                         <img class="icon" src="../assets/left.png" alt="left-arrow">
                         <img class="icon" src="../assets/right.png" alt="right-arrow">
                     </div>
@@ -27,7 +27,7 @@
             <div class="card">
                 <img class="img" src="../assets/featured/feature2.png" alt="featured">
                 <div class=" arrows ">
-                    <div class="hide-des between">
+                    <div class="between hide-des ">
                         <img class="icon" src="../assets/left.png" alt="left-arrow">
                         <img class="icon" src="../assets/right.png" alt="right-arrow">
                     </div>
@@ -46,8 +46,8 @@
 
             <div class="card">
                 <img class="img" src="../assets/featured/feature3.png" alt="featured">
-                <div class=" arrows ">
-                    <div class="hide-des between">
+                <div class="arrows ">
+                    <div class="between hide-des ">
                         <img class="icon" src="../assets/left.png" alt="left-arrow">
                         <img class="icon" src="../assets/right.png" alt="right-arrow">
                     </div>
@@ -67,7 +67,7 @@
             <div class="card">
                 <img class="img" src="../assets/featured/feature4.png" alt="featured">
                 <div class="arrows">
-                    <div class="hide-des between">
+                    <div class="between hide-des">
                         <img class="icon" src="../assets/left.png" alt="left-arrow">
                         <img class="icon" src="../assets/right.png" alt="right-arrow">
                     </div>
@@ -215,17 +215,17 @@
     height: 35px;
 }
 
-
-.hide-des {
-    display: none;
-}
-
 .between {
     display: flex;
     padding: 0px 9px;
     justify-content: space-between;
     align-items: center;
 }
+
+.hide-des {
+    display: none;
+}
+
 
 @media(max-width: 768px) {
     .arrows {
